@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "League-Spartan";
+  src: url("./assets/font/static/Outfit-Regular.ttf") format(truetype);
+}
+:root {
+  --darkgray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --verydarkgray: hsl(0, 0%, 27%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League-Spartan", sans-serif;
+}
+body {
+  font-size: 1rem;
+  color: var(--verydarkgray);
+  background-color: var(--white);
+  width: clamp(64rem, 100%, 90rem);
+  margin: auto;
+}
+main {
+  min-height: 75vh;
+}
+.navigationSection {
+  width: 55%;
+  position: relative;
+  padding: 2rem;
+  background-image: url("./assets/images/desktop-image-hero-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navigationSection div {
+  position: absolute;
+  bottom: 0;
+  right: -7rem;
+}
+.navigationSection div img {
+  background-color: var(--black);
+  padding: 1.45rem;
+  width: 3.5rem;
+}
+header {
+  width: 45%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+header section {
+  width: 75%;
+  margin: 0 12.5%;
+}
+header section p {
+  margin: 1rem 0;
+}
+header section div {
+  align-items: center;
+  gap: 1rem;
+}
+h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
+span h5 {
+  margin: 0 0 1rem 0;
+}
+nav {
+  align-items: center;
+  gap: 2.65rem;
+}
+.furnitures {
+  min-height: 40vh;
+}
+.furnitures div {
+  width: 30%;
+}
+.furnitures div:nth-child(1) {
+  background-image: url("./assets/images/image-about-dark.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.furnitures div:nth-child(2) {
+  width: 40%;
+  padding: 2rem 3%;
+  align-items: center;
+}
+.furnitures div:nth-child(3) {
+  background-image: url("./assets/images/image-about-light.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10%;
+}
+.change,
+li {
+  cursor: pointer;
+}
+h1 {
+  font-size: 2em;
+}
+h1,
+h3 {
+  color: var(--black);
+}
+ul {
+  list-style: none;
+  gap: 1rem;
+  color: white;
+}
+.d-flex {
+  display: flex;
+}
+.d-none,
+.menu {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+
+@media (max-width: 40rem) {
+  ul {
+    display: none !important;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    left: 7%;
+    cursor: pointer;
+  }
+  nav {
+    gap: unset;
+    justify-content: center;
+  }
+  body {
+    width: 100%;
+  }
+  .navigationSection,
+  header {
+    width: 100%;
+    padding: 2rem 7%;
+  }
+  main {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .navigationSection {
+    background-image: url("./assets/images/mobile-image-hero-1.jpg");
+    min-height: 50vh;
+  }
+  .navigationSection div {
+    right: 0;
+  }
+  header {
+    min-height: 50vh;
+  }
+  header section {
+    width: 100%;
+    margin: unset;
+  }
+  .furnitures {
+    flex-direction: column;
+    padding: unset;
+  }
+  .furnitures div:nth-child(1),
+  .furnitures div:nth-child(2),
+  .furnitures div:nth-child(3) {
+    width: 100%;
+    padding: unset;
+    min-height: 30vh;
+  }
+  .furnitures div:nth-child(2) {
+    padding: 4rem 7%;
+  }
+}
+@media (max-width: 65rem) {
+  .navigationSection div {
+    right: 0;
+  }
+}
