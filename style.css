@@ -29,18 +29,17 @@ main {
 .navigationSection {
   width: 55%;
   position: relative;
-  padding: 2rem;
-  background-image: url("./assets/images/desktop-image-hero-1.jpg");
+  background-image: var(--bgImgDesk);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.navigationSection div {
+.navigationSection .controls {
   position: absolute;
   bottom: 0;
   right: -7rem;
 }
-.navigationSection div img {
+.navigationSection .controls img {
   background-color: var(--black);
   padding: 1.45rem;
   width: 3.5rem;
@@ -72,6 +71,9 @@ span h5 {
 nav {
   align-items: center;
   gap: 2.65rem;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 .furnitures {
   min-height: 40vh;
@@ -101,6 +103,18 @@ nav {
 li {
   cursor: pointer;
 }
+.sideBar {
+  background-color: white;
+  padding: 3rem 7%;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.sideBar ul {
+  color: var(--black);
+}
 h1 {
   font-size: 2em;
 }
@@ -123,9 +137,20 @@ ul {
 .d-block {
   display: block;
 }
-
+.sideBar {
+  animation: sideBar 0.25s linear;
+  transition: 0.5s;
+}
+@keyframes sideBar {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
 @media (max-width: 40rem) {
-  ul {
+  .desktopNav {
     display: none !important;
   }
   .menu {
@@ -137,11 +162,11 @@ ul {
   nav {
     gap: unset;
     justify-content: center;
+    padding: 3rem 7%;
   }
   body {
     width: 100%;
   }
-  .navigationSection,
   header {
     width: 100%;
     padding: 2rem 7%;
@@ -151,10 +176,11 @@ ul {
     min-height: unset;
   }
   .navigationSection {
-    background-image: url("./assets/images/mobile-image-hero-1.jpg");
+    background-image: var(--bgImgMobile);
     min-height: 50vh;
+    width: 100%;
   }
-  .navigationSection div {
+  .navigationSection .controls {
     right: 0;
   }
   header {
@@ -180,7 +206,7 @@ ul {
   }
 }
 @media (max-width: 65rem) {
-  .navigationSection div {
+  .navigationSection .controls {
     right: 0;
   }
 }
