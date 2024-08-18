@@ -20,7 +20,7 @@ body {
   font-size: 1rem;
   color: var(--verydarkgray);
   background-color: var(--white);
-  width: clamp(64rem, 100%, 90rem);
+  width: clamp(64rem, 100%, 96.875rem);
   margin: auto;
 }
 main {
