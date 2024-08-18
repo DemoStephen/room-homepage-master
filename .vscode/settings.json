@@ -1,0 +1,7 @@
+{
+"files.associations": {
+"*.json": "html",
+"assignment.C": "cpp"
+},
+"code-runner.runInTerminal": true
+}
