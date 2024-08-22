@@ -29,6 +29,7 @@ body {
 }
 main {
   min-height: 75vh;
+  min-height: 75svh;
 }
 .navigationSection {
   width: 55%;
@@ -90,6 +91,7 @@ nav {
 }
 .furnitures {
   min-height: 40vh;
+  min-height: 40svh;
 }
 .furnitures div {
   width: 30%;
@@ -195,6 +197,7 @@ ul {
   .navigationSection {
     background-image: var(--bgImgMobile);
     min-height: 50vh;
+    min-height: 50svh;
     width: 100%;
   }
   .navigationSection .controls {
@@ -202,6 +205,7 @@ ul {
   }
   header {
     min-height: 50vh;
+    min-height: 50svh;
   }
   header section {
     width: 100%;
@@ -217,13 +221,36 @@ ul {
     width: 100%;
     padding: unset;
     min-height: 30vh;
+    min-height: 50svh;
   }
   .furnitures div:nth-child(2) {
     padding: 4rem 7%;
   }
 }
 @media (max-width: 65rem) {
+  body {
+    width: 100%;
+  }
+  main {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
   .navigationSection .controls {
     right: 0;
+  }
+}
+@media (height >= 61.25rem) {
+  body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+  main {
+    min-height: 65vh;
+    min-height: 65svh;
+  }
+  .furnitures {
+    min-height: 35vh;
+    min-height: 35svh;
   }
 }
